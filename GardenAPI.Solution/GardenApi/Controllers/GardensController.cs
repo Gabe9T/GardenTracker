@@ -47,12 +47,6 @@ namespace GardenApi.Controllers
     [HttpGet("{id}")]
     public async Task<ActionResult<Garden>> GetGarden(int id)
     {
-      // Garden garden = await _db.Gardens.FindAsync(id);
-      // if (garden == null)
-      // {
-      //   return NotFound();
-      // }
-      // return garden;
       Garden thisgarden = await _db.Gardens
         .Include(garden => garden.Grids)
         .FirstOrDefaultAsync(garden => garden.GardenId == id);

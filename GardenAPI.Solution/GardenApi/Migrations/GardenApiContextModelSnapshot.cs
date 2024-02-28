@@ -36,6 +36,15 @@ namespace GardenApi.Migrations
                     b.HasKey("GardenId");
 
                     b.ToTable("Gardens");
+
+                    b.HasData(
+                        new
+                        {
+                            GardenId = 1,
+                            GridQty = 4,
+                            Name = "Backyard Garden",
+                            Size = "10x10"
+                        });
                 });
 
             modelBuilder.Entity("GardenApi.Models.Grid", b =>
@@ -55,6 +64,14 @@ namespace GardenApi.Migrations
                     b.HasIndex("GardenId");
 
                     b.ToTable("Grids");
+
+                    b.HasData(
+                        new
+                        {
+                            GridId = 1,
+                            GardenId = 1,
+                            LocationCode = "A1"
+                        });
                 });
 
             modelBuilder.Entity("GardenApi.Models.GridSeed", b =>

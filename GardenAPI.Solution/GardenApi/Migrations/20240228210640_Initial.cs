@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GardenApi.Migrations
 {
-    public partial class UpdateSeedTag : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -162,9 +162,19 @@ namespace GardenApi.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
+                table: "Gardens",
+                columns: new[] { "GardenId", "GridQty", "Name", "Size" },
+                values: new object[] { 1, 4, "Backyard Garden", "10x10" });
+
+            migrationBuilder.InsertData(
                 table: "Seeds",
                 columns: new[] { "SeedId", "DatePlanted", "DaysToGerminate", "DaysToHarvest", "DepthToSow", "Information", "Name", "PhotoUrl", "PlantingDates", "Quantity", "Results", "RowSpacing", "SeedSpacing", "Status", "Type", "Yield" },
                 values: new object[] { 1, "2-14-2024", "5-10", 45, "1/4-1/2 in", "The Hakurei Turnip (a.k.a Tokyo Turnip) variety is usually stark white and has an unmatched crispness and tender sweetness. This turnip is commonly eaten raw which has led to it being given the nickname of 'Salad Turnip'.", "Hakurei Turnip", "https://cdn.mos.cms.futurecdn.net/HMr9ceyW7Sc2kuz2S3dNF5.jpg", "spring, fall, winter", 10, "n/a", "12-24in", "2 in", "planted", "vegetable", 5 });
+
+            migrationBuilder.InsertData(
+                table: "Grids",
+                columns: new[] { "GridId", "GardenId", "LocationCode" },
+                values: new object[] { 1, 1, "A1" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Grids_GardenId",
