@@ -1,5 +1,5 @@
 # Garden 
-by Chris Ross Davila, Gabriel Tucker<gabrieltucker260@gmail.com>, Kim Robinson<kimmykokonut@gmail.com>, Nikkita Torres<nikkitatorres@yahoo.com>
+by [Gabriel Tucker](mailto:gabrieltucker260@gmail.com), [Kim Robinson](mailto:kimmykokonut@gmail.com), [Nikkita Torres](mailto:nikkitatorres@yahoo.com), [Chris Ross Davila](mailto:chris@email.com),
 
 ![home page](./GardenAPI.Solution/GardenApi/wwwroot/img/uiHome.png)
 
